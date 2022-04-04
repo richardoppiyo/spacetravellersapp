@@ -29,7 +29,6 @@ export const displayMission = () => async (dispatch) => {
 export default function missionReducer(state = initialState, action) {
   switch (action.type) {
     case LOAD:
-      console.log('inside here!');
       return action.mission;
     default:
       return state;
