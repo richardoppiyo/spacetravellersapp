@@ -6,14 +6,17 @@ import MyProfile from './components/MyProfile';
 import './App.css';
 
 const App = () => (
-  <BrowserRouter>
-    <Header />
-    <Routes>
-      <Route path="/" element={<Rockets />} />
-      <Route path="/Missions" element={<Missions />} />
-      <Route path="/MyProfile" element={<MyProfile />} />
-    </Routes>
-  </BrowserRouter>
+  <>
+    <BrowserRouter>
+      <Header>
+        <Routes>
+          <Route path="/" element={<Rockets />} />
+          <Route path="/Missions" element={<Missions />} />
+          <Route path="/MyProfile" element={<MyProfile />} />
+        </Routes>
+      </Header>
+    </BrowserRouter>
+  </>
 );
 
 export default App;
