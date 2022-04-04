@@ -1,22 +1,15 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import './Header.css';
 
 const Header = ({ children }) => (
   <main>
     <header className="d-flex">
-      <nav>
-        <ul className="links">
-          <li>
-            <NavLink to="/">Rockets</NavLink>
-          </li>
-          <li>
-            <NavLink to="/Missions">Missions</NavLink>
-          </li>
-          <li>
-            <NavLink to="/MyProfile">My Profile</NavLink>
-          </li>
-        </ul>
+      <nav className="links">
+        <NavLink to="/" className="link-item">Rockets</NavLink>
+        <NavLink to="/Missions" className="link-item">Missions</NavLink>
+        <NavLink to="/MyProfile" className="link-item">My Profile</NavLink>
       </nav>
     </header>
     {children}

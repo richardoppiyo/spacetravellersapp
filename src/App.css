@@ -1,11 +1,11 @@
-header {
+/* header {
   background-image: url('./planet.png');
   background-repeat: no-repeat;
   background-size: 7rem;
   height: 10vh;
   border-bottom: 1px solid black;
-}
-
+} */
+/*
 
 .d-flex {
   display: flex;
@@ -14,4 +14,4 @@ header {
 .links {
   justify-content: flex-end;
   align-items: flex-end;
-}
+} */
