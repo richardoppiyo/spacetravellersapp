@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 
 const Header = ({ children }) => (
   <main>
-    <header>
+    <header className="d-flex">
       <nav>
-        <ul>
+        <ul className="links">
           <li>
             <NavLink to="/">Rockets</NavLink>
           </li>
