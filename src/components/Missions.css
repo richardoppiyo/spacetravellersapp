@@ -1,8 +1,84 @@
 .table-style {
     width: 100%;
     text-align: left;
-}
-
-.stylus {
     border: 0.1px solid black;
 }
+
+/* .myown {
+    border: 0.1px solid black !important;
+} */
+
+.styluse {
+    border: 0.1px solid black;
+}
+
+.stylusa {
+    border: 0.1px solid black;
+    width: 10%;
+    padding: 0 0 0 15px;
+}
+
+.stylusb {
+    border: 0.1px solid black;
+    width: 60%;
+    padding: 5px;
+}
+
+.stylusc {
+    border: 0.1px solid black;
+    text-align: center;
+    width: 15%;
+    padding: 5px;
+    padding: 40px;
+    font-size: 10px;
+    text-color: red;
+}
+
+.stylusd {
+    border: 0.1px solid black;
+    width: 10%;
+    text-align: center;
+    padding: 5px;
+} 
+
+.mission-not-member {
+    padding: 5px 7px;
+    background-color: grey;
+    color: #fff;
+  }
+  
+  .mission-member {
+    padding: 5px 7px;
+    background-color: teal;
+    color: #fff;
+  }
+
+  .mission-join {
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    padding: 8px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .mission-button:hover {
+    background-color: black;
+    color: #fff;
+  }
+  
+  .mission-leave {
+    border: 2px solid red;
+    border-radius: 5px;
+    background-color: #fff;
+    color: red;
+    padding: 8px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .mission-cancel:hover {
+    background-color: red;
+    color: #fff;
+  }

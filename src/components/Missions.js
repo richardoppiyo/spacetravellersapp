@@ -22,7 +22,7 @@ const Missions = () => {
       <p>Table with colgroup</p>
       <table className="table-style">
         <colgroup span="4" />
-        <tr className="stylus">
+        <tr className="styluse">
           <th className="stylus">Mission</th>
           <th className="stylus">Description</th>
           <th className="stylus">Status</th>
@@ -30,24 +30,29 @@ const Missions = () => {
         </tr>
 
         {missions.map((mission) => (
-          <tr key={mission.mission_id}>
+          <tr key={mission.mission_id} className="myown">
             {/* console.log(`
             {mission}
             `); */}
-            <td className="stylus">{mission.mission_name}</td>
-            <td className="stylus">{mission.description}</td>
-            <td className="stylus">
-              {mission.reserved ? 'NOT A MEMBER' : 'MEMBER'}
+            <td className="stylusa">{mission.mission_name}</td>
+            <td className="stylusb">{mission.description}</td>
+            <td className="stylusc">
+              <span className={!mission.reserved ? 'mission-not-member' : 'mission-member'}>
+                {!mission.reserved ? 'NOT A MEMBER' : 'MEMBER'}
+              </span>
             </td>
-            <td className="stylus">
-              <button type="button" onClick={() => setMission(mission.mission_id)}>
-                {(!mission.reserved) ? 'Leave Mission' : 'Join Mission'}
+            <td className="stylusd">
+              <button
+                type="button"
+                onClick={() => setMission(mission.mission_id)}
+                className={!mission.reserved ? 'mission-join' : 'mission-leave'}
+              >
+                {(mission.reserved) ? 'Leave Mission' : 'Join Mission'}
               </button>
             </td>
           </tr>
         ))}
         ;
-
       </table>
 
     </>
