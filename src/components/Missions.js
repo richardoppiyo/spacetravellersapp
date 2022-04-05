@@ -1,17 +1,21 @@
 import React, { useEffect } from 'react';
 import './Missions.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { displayMission } from '../redux/missions/missions';
+import { displayMission, toggleStatus } from '../redux/missions/missions';
 
 const Missions = () => {
   const missions = useSelector((state) => state.mission);
+  // const [join, setJoin] = useState(false);
   const dispatch = useDispatch();
   console.log(missions);
-  console.log('my missiom');
+
   useEffect(() => {
-    console.log(missions);
-    dispatch(displayMission());
+    dispatch(displayMission(missions));
   }, []);
+
+  const setMission = (id) => {
+    dispatch(toggleStatus(id));
+  };
 
   return (
     <>
@@ -27,11 +31,18 @@ const Missions = () => {
 
         {missions.map((mission) => (
           <tr key={mission.mission_id}>
+            {/* console.log(`
+            {mission}
+            `); */}
             <td className="stylus">{mission.mission_name}</td>
             <td className="stylus">{mission.description}</td>
-            <td className="stylus">{mission.manufacturers}</td>
             <td className="stylus">
-              <button type="button">JOIN Mission</button>
+              {mission.reserved ? 'NOT A MEMBER' : 'MEMBER'}
+            </td>
+            <td className="stylus">
+              <button type="button" onClick={() => setMission(mission.mission_id)}>
+                {(!mission.reserved) ? 'Leave Mission' : 'Join Mission'}
+              </button>
             </td>
           </tr>
         ))}

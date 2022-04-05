@@ -1,6 +1,7 @@
 import getMissions from './missionapi';
 
 const LOAD = 'spacetravelapp/missions/LOAD';
+const TOGGLE = 'spacetravelapp/missions/TOGGLE';
 
 const initialState = [];
 
@@ -8,6 +9,13 @@ export function load(mission) {
   return {
     type: LOAD,
     mission,
+  };
+}
+
+export function toggleStatus(id) {
+  return {
+    type: TOGGLE,
+    id,
   };
 }
 
@@ -19,8 +27,8 @@ export const displayMission = () => async (dispatch) => {
     missionsTemp.push({
       mission_id: missionsArr[id].mission_id,
       mission_name: missionsArr[id].mission_name,
-      manufacturers: missionsArr[id].manufacturers,
       description: missionsArr[id].description,
+      reserved: false,
     });
   });
   dispatch(load(missionsTemp));
@@ -29,7 +37,14 @@ export const displayMission = () => async (dispatch) => {
 export default function missionReducer(state = initialState, action) {
   switch (action.type) {
     case LOAD:
-      return action.mission;
+      return [...state, ...action.mission];
+    case TOGGLE:
+      return state.map((mission) => {
+        if (mission.mission_id !== action.id) {
+          return mission;
+        }
+        return { ...mission, reserved: !mission.reserved };
+      });
     default:
       return state;
   }
