@@ -19,7 +19,6 @@ const Missions = () => {
 
   return (
     <>
-      <p>Table with colgroup</p>
       <table className="table-style">
         <colgroup span="4" />
         <tr className="styluse">
@@ -31,9 +30,6 @@ const Missions = () => {
 
         {missions.map((mission) => (
           <tr key={mission.mission_id} className="myown">
-            {/* console.log(`
-            {mission}
-            `); */}
             <td className="stylusa">{mission.mission_name}</td>
             <td className="stylusb">{mission.description}</td>
             <td className="stylusc">
@@ -52,7 +48,6 @@ const Missions = () => {
             </td>
           </tr>
         ))}
-        ;
       </table>
 
     </>
