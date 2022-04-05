@@ -7,7 +7,6 @@ const Rockets = () => {
     fetch('https://api.spacexdata.com/v3/rockets')
       .then((res) => res.json())
       .then((response) => {
-        console.log(response);
         setRockets(response);
       });
   }, []);
