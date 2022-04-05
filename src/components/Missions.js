@@ -5,7 +5,6 @@ import { displayMission, toggleStatus } from '../redux/missions/missions';
 
 const Missions = () => {
   const missions = useSelector((state) => state.mission);
-  // const [join, setJoin] = useState(false);
   const dispatch = useDispatch();
   console.log(missions);
 
