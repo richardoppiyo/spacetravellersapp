@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Rockets from './components/Rockets';
+import Rockets from './components/rockets/Rockets';
 import Missions from './components/Missions';
-import MyProfile from './components/MyProfile';
+import MyProfile from './components/profile/MyProfile';
 import './App.css';
 
 const App = () => (
