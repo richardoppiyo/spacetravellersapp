@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import RocketBtn from './RocketBtn';
 
 const Rocket = ({
   image, name, description, id, reserved,
@@ -13,13 +14,13 @@ const Rocket = ({
         <p className="Rocket__description">{description}</p>
       </div>
       {reserved ? (
-        <rocketBtn
+        <RocketBtn
           className="Rocket__btn_Cancel"
           text="Cancel Reservation"
           id={id}
         />
       ) : (
-        <rocketBtn
+        <RocketBtn
           className="Rocket__btn_Reserve"
           text="Reserve Rocket"
           id={id}
