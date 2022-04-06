@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getRockets } from '../Redux/rockets/rockets';
+import { getRockets } from '../../Redux/rockets/rockets';
 import Rocket from './Rocket';
 
 let loadFirstTime = false;
