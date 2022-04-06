@@ -1,4 +1,5 @@
 import React from 'react';
+import './Myprofile.css';
 
 const Rockets = () => (
   <div>
