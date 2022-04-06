@@ -1,0 +1,40 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
+const Rocket = ({
+  image, name, description, id, reserved,
+}) => (
+  <li className="Rocket">
+    <img className="Rocket__img" src={image} alt="rocket-img" />
+    <div className="Rocket__div">
+      <h1 className="Rocket__name">{name}</h1>
+      <div className="Rocket__badge_desc_div">
+        {reserved && <span className="Rocket__reserved_badge">Reserved</span>}
+        <p className="Rocket__description">{description}</p>
+      </div>
+      {reserved ? (
+        <rocketBtn
+          className="Rocket__btn_Cancel"
+          text="Cancel Reservation"
+          id={id}
+        />
+      ) : (
+        <rocketBtn
+          className="Rocket__btn_Reserve"
+          text="Reserve Rocket"
+          id={id}
+        />
+      )}
+    </div>
+  </li>
+);
+
+Rocket.propTypes = {
+  name: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  reserved: PropTypes.bool.isRequired,
+  id: PropTypes.number.isRequired,
+};
+
+export default Rocket;
