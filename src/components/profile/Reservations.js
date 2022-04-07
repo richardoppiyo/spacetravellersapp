@@ -1,13 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import RocketBtn from '../rockets/RocketBtn';
+import './reservations.css';
 
 const Reservations = ({
   reservations, object, message, type,
 }) => (
   <div className="Reservations__div">
-    <h1>
+    <h1 className="rockets-title">
       My
+      <br />
       {object}
     </h1>
     {reservations.length ? (
@@ -21,7 +23,7 @@ const Reservations = ({
               {' '}
               -
               {' '}
-              {urlWiki && <a href={urlWiki} target="_blank" rel="noreferrer">Wiki</a>}
+              {urlWiki && <a href={urlWiki} target="_blank" rel="noreferrer" className="wiki-link">Wiki</a>}
               {' '}
               -
               {' '}

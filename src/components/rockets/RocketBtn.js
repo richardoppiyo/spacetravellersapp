@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { reserveRocketAction } from '../../redux/rockets/rockets';
+import './Rockets.css';
 
 const RocketBtn = ({ className, text, id }) => {
   const dispatch = useDispatch();
