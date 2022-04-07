@@ -39,8 +39,12 @@ export default function missionReducer(state = initialState, action) {
     case LOAD:
       return [...state, ...action.mission];
     case TOGGLE:
-      return state.map((mission) => (mission.mission_id === action.id
-        ? { ...mission, reserved: !mission.reserved } : { ...mission }));
+      return state.map((mission) => {
+        if (mission.mission_id !== action.id) {
+          return mission;
+        }
+        return { ...mission, reserved: !mission.reserved };
+      });
     default:
       return state;
   }
