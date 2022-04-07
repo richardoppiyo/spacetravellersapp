@@ -11,9 +11,7 @@ const Rockets = () => {
   const rockets = useSelector((state) => state.rocketsReducer);
   const activeRockets = rockets.filter((rocket) => rocket.reserved === true);
 
-  const myMissions = missions !== null
-    ? missions.filter((item) => item.reserved !== false) || []
-    : [];
+  const myMissions = missions.filter((mission) => mission.reserved === true);
 
   useEffect(() => {
     dispatch(displayMission(missions));
