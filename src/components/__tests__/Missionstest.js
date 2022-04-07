@@ -2,7 +2,6 @@ import React from 'react';
 import '@testing-library/jest-dom/extend-expect';
 import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
-// import Missions from '../Missions';
 import configureStore from '../../redux/configureStore';
 
 const missions = [
