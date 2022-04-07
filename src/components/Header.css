@@ -9,7 +9,6 @@ header {
 .links {
   display: flex;
   justify-content: flex-end;
-  padding-top: 40px;
 }
 
 .link-item {
@@ -19,4 +18,7 @@ header {
 
 .d-flex {
   height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }

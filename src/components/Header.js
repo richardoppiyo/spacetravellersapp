@@ -6,6 +6,7 @@ import './Header.css';
 const Header = ({ children }) => (
   <main>
     <header className="d-flex">
+      <h1> Space Travellers Hub</h1>
       <nav className="links">
         <NavLink style={({ isActive }) => ((isActive) ? { color: 'red' } : {})} to="/" className="link-item">Rockets</NavLink>
         <NavLink style={({ isActive }) => ((isActive) ? { color: 'red' } : {})} activeClassName="is-active" to="/Missions" className="link-item">Missions</NavLink>
