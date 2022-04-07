@@ -8,7 +8,9 @@ const Missions = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(displayMission(missions));
+    if (missions.length === 0) {
+      dispatch(displayMission());
+    }
   }, []);
 
   const setMission = (id) => {

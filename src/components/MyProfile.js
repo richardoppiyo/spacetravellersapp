@@ -1,21 +1,15 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { displayMission } from '../redux/missions/missions';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import Reservations from './profile/Reservations';
 import './Myprofile.css';
 
 const Rockets = () => {
   const missions = useSelector((state) => state.mission);
-  const dispatch = useDispatch();
 
   const rockets = useSelector((state) => state.rocketsReducer);
   const activeRockets = rockets.filter((rocket) => rocket.reserved === true);
 
   const myMissions = missions.filter((mission) => mission.reserved === true);
-
-  useEffect(() => {
-    dispatch(displayMission(missions));
-  }, []);
 
   return (
     <>
