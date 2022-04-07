@@ -23,7 +23,7 @@ const Reservations = ({
               {' '}
               -
               {' '}
-              {urlWiki && <a href={urlWiki} target="_blank" rel="noreferrer">Wiki</a>}
+              {urlWiki && <a href={urlWiki} target="_blank" rel="noreferrer" className="wiki-link">Wiki</a>}
               {' '}
               -
               {' '}

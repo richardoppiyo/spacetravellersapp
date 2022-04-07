@@ -27,3 +27,13 @@
     margin-top: 2rem;
     font-size: 1.5rem;
   }
+
+  .wiki-link {
+    text-decoration: none;
+    color: #000;
+  }
+
+  .wiki-link:hover {
+    text-decoration: underline;
+    color: #ccc;
+  }
