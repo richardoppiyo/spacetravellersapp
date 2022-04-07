@@ -9,9 +9,14 @@ header {
 .links {
   display: flex;
   justify-content: flex-end;
+  padding-top: 40px;
 }
 
 .link-item {
   text-decoration: none;
   padding: 20px;
+}
+
+.d-flex {
+  height: 150px;
 }

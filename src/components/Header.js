@@ -7,9 +7,9 @@ const Header = ({ children }) => (
   <main>
     <header className="d-flex">
       <nav className="links">
-        <NavLink to="/" className="link-item">Rockets</NavLink>
-        <NavLink to="/Missions" className="link-item">Missions</NavLink>
-        <NavLink to="/MyProfile" className="link-item">My Profile</NavLink>
+        <NavLink style={({ isActive }) => ((isActive) ? { color: 'red' } : {})} to="/" className="link-item">Rockets</NavLink>
+        <NavLink style={({ isActive }) => ((isActive) ? { color: 'red' } : {})} activeClassName="is-active" to="/Missions" className="link-item">Missions</NavLink>
+        <NavLink style={({ isActive }) => ((isActive) ? { color: 'red' } : {})} activeClassName="is-active" to="/MyProfile" className="link-item">My Profile</NavLink>
       </nav>
     </header>
     {children}
