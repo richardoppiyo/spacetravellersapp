@@ -1,0 +1,30 @@
+header {
+  background-image: url('../planet.png');
+  background-repeat: no-repeat;
+  background-size: 7rem;
+  height: 10vh;
+  border-bottom: 1px solid #ccc;
+}
+
+.links {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.link-item {
+  text-decoration: none;
+  padding: 20px;
+  color: #1e90ff;
+}
+
+.d-flex {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.link-item:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}

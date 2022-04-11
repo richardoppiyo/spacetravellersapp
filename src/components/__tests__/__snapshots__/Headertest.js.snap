@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component Test matches Header snapshot 1`] = `
+<main>
+  <header
+    className="d-flex"
+  >
+    <nav
+      className="links"
+    >
+      <a
+        aria-current="page"
+        className="link-item active"
+        href="/"
+        onClick={[Function]}
+      >
+        Rockets
+      </a>
+      <a
+        className="link-item"
+        href="/Missions"
+        onClick={[Function]}
+      >
+        Missions
+      </a>
+      <a
+        className="link-item"
+        href="/MyProfile"
+        onClick={[Function]}
+      >
+        My Profile
+      </a>
+    </nav>
+  </header>
+</main>
+`;

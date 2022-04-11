@@ -1,0 +1,64 @@
+/* Rockets cards */
+
+.Rockets {
+  display: flex;
+  flex-direction: column;
+}
+
+.Rockets li {
+  list-style-type: none;
+}
+
+.Rocket-Card {
+  width: 80rem;
+  margin-bottom: 3rem;
+  display: flex;
+}
+
+.Rocket-Card img {
+  width: 20rem;
+  height: 20vh;
+}
+
+.Rocket__div {
+  width: 70rem;
+  display: flex;
+  flex-direction: column;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  text-align: justify;
+}
+
+.Rocket__btn_Reserve {
+  width: 20rem;
+  padding: 1rem;
+  background-color: #017bfe;
+  border: none;
+  color: #fff;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.Rocket__btn_Cancel {
+  width: 20rem;
+  padding: 1rem;
+  background-color: #fff;
+  border: 1px solid grey;
+  color: grey;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.Rocket__reserved_badge {
+  color: #fff;
+  display: block;
+  position: relative;
+  border-radius: 3px;
+  padding: 2px 5px;
+  margin-top: 2px;
+  background-color: #68c9ca;
+  margin-right: 1rem;
+  float: left;
+}
